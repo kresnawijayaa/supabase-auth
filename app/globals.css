@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+:root {
+  --bg-dark: #000000;
+  --bg-card: #0a0a0a;
+  --border-subtle: #1a1a1a;
+  --border-bold: #2a2a2a;
+  --text-main: #ffffff;
+  --text-muted: #737373;
+  --accent: #ffffff;
+}
+
+body {
+  @apply min-h-screen text-white antialiased selection:bg-white selection:text-black font-sans;
+  background-color: var(--bg-dark);
+}
+
+.glass {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  transition: all 0.3s ease;
+}
+
+.glass:hover {
+  border-color: var(--border-bold);
+  background-color: #0f0f0f;
+}
+
+.btn-primary {
+  @apply w-full py-4 px-6 rounded-md bg-white text-black font-bold tracking-tight transition-all duration-200 active:scale-95 disabled:opacity-40 hover:bg-neutral-200;
+}
+
+.btn-outline {
+  @apply w-full py-4 px-6 rounded-md border border-neutral-800 bg-transparent hover:bg-white hover:text-black font-semibold transition-all duration-200 active:scale-95;
+}
+
+.input-field {
+  @apply w-full py-4 px-5 rounded-md bg-transparent border border-neutral-800 text-white placeholder:text-neutral-700 focus:outline-none focus:border-white transition-all duration-200 font-mono text-sm;
+}
+
+.heading-premium {
+  @apply text-5xl md:text-6xl font-bold tracking-tight leading-tight text-white;
+}
+
+.status-error {
+  @apply p-4 rounded-md bg-red-950/20 border border-red-900/50 text-red-500 text-sm font-medium;
+}
+
+.status-success {
+  @apply p-4 rounded-md bg-emerald-950/20 border border-emerald-900/50 text-emerald-500 text-sm font-medium;
+}
+
+/* Antigravity Grid Layout */
+.bg-grid {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, #111 1px, transparent 1px),
+    linear-gradient(to bottom, #111 1px, transparent 1px);
+}
+
+.bg-dot-mask {
+  mask-image: radial-gradient(ellipse 60% 50% at 50% 0%, #000 70%, transparent 100%);
+}
